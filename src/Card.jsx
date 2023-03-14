@@ -1,12 +1,19 @@
-import React from "react";
+import "./App.css";
 
-const Card = (props) => {
+const Card = ({ name, player }) => {
+  console.log(name, player);
 
   return (
-    <div>
-      <h2>Información Ingresada:</h2>
-      <p>Tu Nombre: {props.name}</p>
-      <p>Jugador Favorito: {props.player}</p>
+    <div className="card-container">
+      <h2>Tu jugador favorito es:</h2>
+      <div className="card-content">
+        <p>
+          <strong>Nombre:</strong> {name}
+        </p>
+        <p>
+          <strong>Jugador favorito:</strong> {player}
+        </p>
+      </div>
     </div>
   );
 };
